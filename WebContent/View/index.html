@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="store">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="Stylesheet/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="Stylesheet/form.css" type="text/css" rel="stylesheet" />
+<title>Untitled Document</title>
+</head>
+<body ng-controller="StoreController as store">
+<h1>Flatlander's Crafted Gems</h1>
+<!--<div ng-hide="store.product.soldOut">
+<h1> {{store.product.name}} </h1>
+<h2> ${{store.product.price}} </h2>
+<p> {{store.product.description}} </p>
+<button ng-show="store.product.canPurchase">Add To Cart</button>
+</div>
+<div ng-repeat="product in store.products">
+<h1> {{product.name}} </h1>
+<h2> ${{product.price}} </h2>
+<p> {{product.description}} </p>
+<button ng-show="product.canPurchase">Add To Cart</button>
+</div>-->
+<ul class="list-group">
+<li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+<h3>
+<product-title></product-title>
+<img ng-src="{{product.images[0].full}}" err-src="http://google.com/favicon.ico"/>
+</h3>
+<a href="View/index2.html">Index2</a>
+<product-panels></product-panels>
+</li>
+</ul>
+<script type="text/javascript" src="Javascript/angular.min.js"></script>
+<script type="text/javascript" src="Javascript/app.js"></script>
+<script type="text/javascript" src="Javascript/products.js"></script>
+</body>
+</html>

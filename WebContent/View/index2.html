@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Basics</title>
+<link href="../Stylesheet/foundation.min.css" rel="stylesheet">
+<script type="text/javascript" src="../Javascript/angular.min.js"></script>
+<script type="text/javascript" src="../Javascript/main.js"></script>
+</head>
+<body>
+
+<div ng-app="Demo">
+<div ng-controller="FirstCtrl">
+<!-- <input type="text" ng-model="data.message"> -->
+	<h1>{{data.message + "World"}}</h1>
+	<div class="{{data.message}}">
+		Wrap me with a foundation component
+	</div>
+	</div>
+</div>
+	
+</body>
+</html>
